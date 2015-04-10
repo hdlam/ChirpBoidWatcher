@@ -1,0 +1,745 @@
+
+**** Build of configuration Release for project ChirpObs ****
+
+make all 
+Building file: ../src/util/Config.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/util/Config.d" -MT"src/util/Config.d" -o "src/util/Config.o" "../src/util/Config.cpp"
+Finished building: ../src/util/Config.cpp
+ 
+Building file: ../src/util/functions.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/util/functions.d" -MT"src/util/functions.d" -o "src/util/functions.o" "../src/util/functions.cpp"
+Finished building: ../src/util/functions.cpp
+ 
+Building file: ../src/util/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/util/main.d" -MT"src/util/main.d" -o "src/util/main.o" "../src/util/main.cpp"
+In file included from /usr/include/c++/4.8/regex:35:0,
+                 from ../src/util/main.cpp:18:
+/usr/include/c++/4.8/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support for the \
+  ^
+In file included from ../src/util/main.cpp:25:0:
+../src/util/../camera/CameraHandler.h:36:2: warning: identifier ‘nullptr’ is a keyword in C++11 [-Wc++0x-compat]
+  VideoCapture* capture = nullptr;
+  ^
+../src/util/main.cpp:371:13: warning: multi-character character constant [-Wmultichar]
+   if(key == '-1') {
+             ^
+In file included from ../src/util/../tracker/Tracker.h:16:0,
+                 from ../src/util/main.cpp:22:
+../src/util/../tracker/../camera/BoundingBoxHandler.h:35:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  int numPoints = 0;
+                  ^
+../src/util/../tracker/../camera/BoundingBoxHandler.h:38:14: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  int angle = 0;
+              ^
+In file included from ../src/util/../tracker/Tracker.h:17:0,
+                 from ../src/util/main.cpp:22:
+../src/util/../tracker/Chirp.h:69:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  int lastSeen = 1;
+                 ^
+../src/util/../tracker/Chirp.h:71:14: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  int score = 0;
+              ^
+In file included from ../src/util/../tracker/Tracker.h:18:0,
+                 from ../src/util/main.cpp:22:
+../src/util/../tracker/../hungarian/Hungarian.h:22:12: error: ‘std::shared_ptr’ has not been declared
+ using std::shared_ptr;
+            ^
+../src/util/../tracker/../hungarian/Hungarian.h:31:20: error: ‘>>’ should be ‘> >’ within a nested template argument list
+ vector<pair<int,int>> Hungarian(vector<vector<float>> &matrix);
+                    ^
+../src/util/../tracker/../hungarian/Hungarian.h:31:52: error: ‘>>’ should be ‘> >’ within a nested template argument list
+ vector<pair<int,int>> Hungarian(vector<vector<float>> &matrix);
+                                                    ^
+In file included from ../src/util/main.cpp:25:0:
+../src/util/../camera/CameraHandler.h:36:26: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  VideoCapture* capture = nullptr;
+                          ^
+../src/util/../camera/CameraHandler.h:36:26: error: ‘nullptr’ was not declared in this scope
+In file included from ../src/util/main.cpp:26:0:
+../src/util/../network/Communicator.h: In member function ‘void network::Communicator<T>::sendAscii(std::vector<_Tp>)’:
+../src/util/../network/Communicator.h:59:22: error: range-based ‘for’ loops are not allowed in C++98 mode
+    for ( T element : data)
+                      ^
+In file included from ../src/util/main.cpp:26:0:
+../src/util/../network/Communicator.h: In member function ‘void network::Communicator<T>::listen(void (*)(std::vector<_Tp>), short int)’:
+../src/util/../network/Communicator.h:95:6: error: ‘array’ is not a member of ‘std’
+      std::array<T, 1024> recv_buf;
+      ^
+../src/util/../network/Communicator.h:95:6: note: suggested alternatives:
+In file included from /usr/include/boost/asio/buffer.hpp:23:0,
+                 from /usr/include/boost/asio/detail/reactive_socket_service.hpp:22,
+                 from /usr/include/boost/asio/datagram_socket_service.hpp:28,
+                 from /usr/include/boost/asio/basic_datagram_socket.hpp:21,
+                 from /usr/include/boost/asio.hpp:21,
+                 from ../src/util/../network/Communicator.h:11,
+                 from ../src/util/main.cpp:26:
+/usr/include/boost/asio/detail/array_fwd.hpp:23:7: note:   ‘boost::array’
+ class array;
+       ^
+/usr/include/boost/asio/detail/array_fwd.hpp:23:7: note:   ‘boost::array’
+In file included from ../src/util/main.cpp:26:0:
+../src/util/../network/Communicator.h:95:18: error: expected primary-expression before ‘,’ token
+      std::array<T, 1024> recv_buf;
+                  ^
+../src/util/../network/Communicator.h:95:26: error: ‘recv_buf’ was not declared in this scope
+      std::array<T, 1024> recv_buf;
+                          ^
+../src/util/../network/Communicator.h: In member function ‘void network::Communicator<T>::listenAscii(void (*)(std::string), short int)’:
+../src/util/../network/Communicator.h:124:6: error: ‘array’ is not a member of ‘std’
+      std::array<char, 2048> recv_buf;
+      ^
+../src/util/../network/Communicator.h:124:6: note: suggested alternatives:
+In file included from /usr/include/boost/asio/buffer.hpp:23:0,
+                 from /usr/include/boost/asio/detail/reactive_socket_service.hpp:22,
+                 from /usr/include/boost/asio/datagram_socket_service.hpp:28,
+                 from /usr/include/boost/asio/basic_datagram_socket.hpp:21,
+                 from /usr/include/boost/asio.hpp:21,
+                 from ../src/util/../network/Communicator.h:11,
+                 from ../src/util/main.cpp:26:
+/usr/include/boost/asio/detail/array_fwd.hpp:23:7: note:   ‘boost::array’
+ class array;
+       ^
+/usr/include/boost/asio/detail/array_fwd.hpp:23:7: note:   ‘boost::array’
+In file included from ../src/util/main.cpp:26:0:
+../src/util/../network/Communicator.h:124:17: error: expected primary-expression before ‘char’
+      std::array<char, 2048> recv_buf;
+                 ^
+../src/util/../network/Communicator.h:124:17: error: expected ‘;’ before ‘char’
+../src/util/../network/Communicator.h:127:59: error: ‘recv_buf’ was not declared in this scope
+      size_t len = socket.receive_from(boost::asio::buffer(recv_buf),
+                                                           ^
+../src/util/main.cpp: In function ‘void CreateTrackbars()’:
+../src/util/main.cpp:62:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MIN", H_MIN);
+                                      ^
+../src/util/main.cpp:63:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MAX", H_MAX);
+                                      ^
+../src/util/main.cpp:64:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MIN", S_MIN);
+                                      ^
+../src/util/main.cpp:65:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MAX", S_MAX);
+                                      ^
+../src/util/main.cpp:66:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MIN", V_MIN);
+                                      ^
+../src/util/main.cpp:67:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MAX", V_MAX);
+                                      ^
+../src/util/main.cpp: In function ‘void drawLeds(std::vector<Led>, cv::Mat&)’:
+../src/util/main.cpp:102:16: error: range-based ‘for’ loops are not allowed in C++98 mode
+  for(Led led : theLeds) {
+                ^
+../src/util/main.cpp: In function ‘void messageHandler(std::vector<Chirp>)’:
+../src/util/main.cpp:125:23: error: range-based ‘for’ loops are not allowed in C++98 mode
+  for(const Chirp &i : robots) {
+                       ^
+../src/util/main.cpp: In function ‘void extractInformation(std::string, int&, double&, double&, double&)’:
+../src/util/main.cpp:147:31: error: range-based ‘for’ loops are not allowed in C++98 mode
+  for (std::string robotInfo : robotsInfo)
+                               ^
+../src/util/main.cpp:150:3: error: ‘regex’ is not a member of ‘std’
+   std::regex xReg("X.*",std::regex_constants::basic);
+   ^
+../src/util/main.cpp:150:3: note: suggested alternative:
+In file included from /usr/include/boost/regex_fwd.hpp:27:0,
+                 from /usr/include/boost/asio/detail/regex_fwd.hpp:20,
+                 from /usr/include/boost/asio/read_until.hpp:26,
+                 from /usr/include/boost/asio.hpp:91,
+                 from ../src/util/../network/Communicator.h:11,
+                 from ../src/util/main.cpp:26:
+/usr/include/boost/regex/v4/regex_fwd.hpp:60:48: note:   ‘boost::regex’
+ typedef basic_regex<char, regex_traits<char> > regex;
+                                                ^
+../src/util/main.cpp:150:14: error: expected ‘;’ before ‘xReg’
+   std::regex xReg("X.*",std::regex_constants::basic);
+              ^
+../src/util/main.cpp:151:3: error: ‘regex’ is not a member of ‘std’
+   std::regex yReg("Y.*",std::regex_constants::basic);
+   ^
+../src/util/main.cpp:151:3: note: suggested alternative:
+In file included from /usr/include/boost/regex_fwd.hpp:27:0,
+                 from /usr/include/boost/asio/detail/regex_fwd.hpp:20,
+                 from /usr/include/boost/asio/read_until.hpp:26,
+                 from /usr/include/boost/asio.hpp:91,
+                 from ../src/util/../network/Communicator.h:11,
+                 from ../src/util/main.cpp:26:
+/usr/include/boost/regex/v4/regex_fwd.hpp:60:48: note:   ‘boost::regex’
+ typedef basic_regex<char, regex_traits<char> > regex;
+                                                ^
+../src/util/main.cpp:151:14: error: expected ‘;’ before ‘yReg’
+   std::regex yReg("Y.*",std::regex_constants::basic);
+              ^
+../src/util/main.cpp:152:3: error: ‘regex’ is not a member of ‘std’
+   std::regex rReg("R.*",std::regex_constants::basic);
+   ^
+../src/util/main.cpp:152:3: note: suggested alternative:
+In file included from /usr/include/boost/regex_fwd.hpp:27:0,
+                 from /usr/include/boost/asio/detail/regex_fwd.hpp:20,
+                 from /usr/include/boost/asio/read_until.hpp:26,
+                 from /usr/include/boost/asio.hpp:91,
+                 from ../src/util/../network/Communicator.h:11,
+                 from ../src/util/main.cpp:26:
+/usr/include/boost/regex/v4/regex_fwd.hpp:60:48: note:   ‘boost::regex’
+ typedef basic_regex<char, regex_traits<char> > regex;
+                                                ^
+../src/util/main.cpp:152:14: error: expected ‘;’ before ‘rReg’
+   std::regex rReg("R.*",std::regex_constants::basic);
+              ^
+../src/util/main.cpp:153:3: error: ‘regex’ is not a member of ‘std’
+   std::regex doubleReg(".*\\..*",std::regex_constants::basic);
+   ^
+../src/util/main.cpp:153:3: note: suggested alternative:
+In file included from /usr/include/boost/regex_fwd.hpp:27:0,
+                 from /usr/include/boost/asio/detail/regex_fwd.hpp:20,
+                 from /usr/include/boost/asio/read_until.hpp:26,
+                 from /usr/include/boost/asio.hpp:91,
+                 from ../src/util/../network/Communicator.h:11,
+                 from ../src/util/main.cpp:26:
+/usr/include/boost/regex/v4/regex_fwd.hpp:60:48: note:   ‘boost::regex’
+ typedef basic_regex<char, regex_traits<char> > regex;
+                                                ^
+../src/util/main.cpp:153:14: error: expected ‘;’ before ‘doubleReg’
+   std::regex doubleReg(".*\\..*",std::regex_constants::basic);
+              ^
+../src/util/main.cpp:157:28: error: range-based ‘for’ loops are not allowed in C++98 mode
+   for (std::string field : fields)
+                            ^
+../src/util/main.cpp:159:4: error: ‘smatch’ is not a member of ‘std’
+    std::smatch x_match;
+    ^
+../src/util/main.cpp:159:16: error: expected ‘;’ before ‘x_match’
+    std::smatch x_match;
+                ^
+../src/util/main.cpp:160:4: error: ‘smatch’ is not a member of ‘std’
+    std::smatch y_match;
+    ^
+../src/util/main.cpp:160:16: error: expected ‘;’ before ‘y_match’
+    std::smatch y_match;
+                ^
+../src/util/main.cpp:161:4: error: ‘smatch’ is not a member of ‘std’
+    std::smatch r_match;
+    ^
+../src/util/main.cpp:161:16: error: expected ‘;’ before ‘r_match’
+    std::smatch r_match;
+                ^
+../src/util/main.cpp:162:4: error: ‘smatch’ is not a member of ‘std’
+    std::smatch double_match;
+    ^
+../src/util/main.cpp:162:16: error: expected ‘;’ before ‘double_match’
+    std::smatch double_match;
+                ^
+../src/util/main.cpp:163:8: error: ‘regex_match’ is not a member of ‘std’
+    if (std::regex_match(field, x_match, xReg))
+        ^
+../src/util/main.cpp:163:32: error: ‘x_match’ was not declared in this scope
+    if (std::regex_match(field, x_match, xReg))
+                                ^
+../src/util/main.cpp:163:41: error: ‘xReg’ was not declared in this scope
+    if (std::regex_match(field, x_match, xReg))
+                                         ^
+../src/util/main.cpp:169:8: error: ‘regex_match’ is not a member of ‘std’
+    if (std::regex_match(field, y_match, yReg))
+        ^
+../src/util/main.cpp:169:32: error: ‘y_match’ was not declared in this scope
+    if (std::regex_match(field, y_match, yReg))
+                                ^
+../src/util/main.cpp:169:41: error: ‘yReg’ was not declared in this scope
+    if (std::regex_match(field, y_match, yReg))
+                                         ^
+../src/util/main.cpp:181:8: error: ‘regex_match’ is not a member of ‘std’
+    if (std::regex_match(field, r_match, rReg))
+        ^
+../src/util/main.cpp:181:32: error: ‘r_match’ was not declared in this scope
+    if (std::regex_match(field, r_match, rReg))
+                                ^
+../src/util/main.cpp:181:41: error: ‘rReg’ was not declared in this scope
+    if (std::regex_match(field, r_match, rReg))
+                                         ^
+../src/util/main.cpp:193:8: error: ‘regex_match’ is not a member of ‘std’
+    if (std::regex_match(field, double_match, doubleReg))
+        ^
+../src/util/main.cpp:193:32: error: ‘double_match’ was not declared in this scope
+    if (std::regex_match(field, double_match, doubleReg))
+                                ^
+../src/util/main.cpp:193:46: error: ‘doubleReg’ was not declared in this scope
+    if (std::regex_match(field, double_match, doubleReg))
+                                              ^
+../src/util/main.cpp: In function ‘void messageHandlerAscii(std::string)’:
+../src/util/main.cpp:216:31: error: range-based ‘for’ loops are not allowed in C++98 mode
+  for (std::string robotInfo : robotsInfo)
+                               ^
+make: *** [src/util/main.o] Error 1
+
+**** Build Finished ****
+
+**** Rebuild of configuration Debug for project ChirpObs ****
+
+**** Internal Builder is used for build               ****
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/hungarian/Hungarian.o ../src/hungarian/Hungarian.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/util/functions.o ../src/util/functions.cpp
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/rs232/rs232.o ../src/rs232/rs232.c
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/camera/BoundingBoxHandler.o ../src/camera/BoundingBoxHandler.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/tracker/GeneralTracker.o ../src/tracker/GeneralTracker.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/camera/Led.o ../src/camera/Led.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/tracker/Chirp.o ../src/tracker/Chirp.cpp
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:22:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:37:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:50:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/util/Config.o ../src/util/Config.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/util/main.o ../src/util/main.cpp
+../src/util/main.cpp:371:13: warning: multi-character character constant [-Wmultichar]
+   if(key == '-1') {
+             ^
+../src/util/main.cpp: In function ‘void CreateTrackbars()’:
+../src/util/main.cpp:62:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MIN", H_MIN);
+                                      ^
+../src/util/main.cpp:63:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MAX", H_MAX);
+                                      ^
+../src/util/main.cpp:64:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MIN", S_MIN);
+                                      ^
+../src/util/main.cpp:65:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MAX", S_MAX);
+                                      ^
+../src/util/main.cpp:66:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MIN", V_MIN);
+                                      ^
+../src/util/main.cpp:67:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MAX", V_MAX);
+                                      ^
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/tracker/Tracker.o ../src/tracker/Tracker.cpp
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::categorizeLeds(std::vector<Led>&, std::vector<Chirp>&, std::vector<Led>&, std::vector<Led>&, std::vector<Led>&)’:
+../src/tracker/Tracker.cpp:53:64: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  bool allPlaced = (robots.size() == util::Config::getNumRobots());
+                                                                ^
+../src/tracker/Tracker.cpp:59:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i < robots.size(); i++) {
+                                ^
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::findRobotsInCategory0(std::vector<Led>&, std::vector<Led>&, std::vector<Led>&)’:
+../src/tracker/Tracker.cpp:100:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(robots.size() == util::Config::getNumRobots()) {
+                                                 ^
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::parseLeds(std::vector<Led>)’:
+../src/tracker/Tracker.cpp:134:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(robots.size() == util::Config::getNumRobots()) {
+                                                 ^
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui
+Build complete for project ChirpObs
+Time consumed: 24755  ms.  
+
+**** Build of configuration Debug for project ChirpObs ****
+
+**** Internal Builder is used for build               ****
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/tracker/Tracker.o ../src/tracker/Tracker.cpp
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::categorizeLeds(std::vector<Led>&, std::vector<Chirp>&, std::vector<Led>&, std::vector<Led>&, std::vector<Led>&)’:
+../src/tracker/Tracker.cpp:53:64: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  bool allPlaced = (robots.size() == util::Config::getNumRobots());
+                                                                ^
+../src/tracker/Tracker.cpp:59:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i < robots.size(); i++) {
+                                ^
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::findRobotsInCategory0(std::vector<Led>&, std::vector<Led>&, std::vector<Led>&)’:
+../src/tracker/Tracker.cpp:100:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(robots.size() == util::Config::getNumRobots()) {
+                                                 ^
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::parseLeds(std::vector<Led>)’:
+../src/tracker/Tracker.cpp:134:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(robots.size() == util::Config::getNumRobots()) {
+                                                 ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/rs232/rs232.o ../src/rs232/rs232.c
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/util/Config.o ../src/util/Config.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/camera/BoundingBoxHandler.o ../src/camera/BoundingBoxHandler.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/util/functions.o ../src/util/functions.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/camera/Led.o ../src/camera/Led.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/util/main.o ../src/util/main.cpp
+../src/util/main.cpp:371:13: warning: multi-character character constant [-Wmultichar]
+   if(key == '-1') {
+             ^
+../src/util/main.cpp: In function ‘void CreateTrackbars()’:
+../src/util/main.cpp:62:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MIN", H_MIN);
+                                      ^
+../src/util/main.cpp:63:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MAX", H_MAX);
+                                      ^
+../src/util/main.cpp:64:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MIN", S_MIN);
+                                      ^
+../src/util/main.cpp:65:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MAX", S_MAX);
+                                      ^
+../src/util/main.cpp:66:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MIN", V_MIN);
+                                      ^
+../src/util/main.cpp:67:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MAX", V_MAX);
+                                      ^
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/tracker/Chirp.o ../src/tracker/Chirp.cpp
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:22:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:37:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:50:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/tracker/GeneralTracker.o ../src/tracker/GeneralTracker.cpp
+g++ -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -o src/hungarian/Hungarian.o ../src/hungarian/Hungarian.cpp
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui
+Build complete for project ChirpObs
+Time consumed: 24621  ms.  
+
+**** Build of configuration Debug for project ChirpObs ****
+
+**** Internal Builder is used for build               ****
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui
+Build complete for project ChirpObs
+Time consumed: 411  ms.  
+
+**** Build of configuration Debug for project ChirpObs ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for ChirpObs
+18:29:54 **** Incremental Build of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/util/main.o ../src/util/main.cpp 
+../src/util/main.cpp:371:13: warning: multi-character character constant [-Wmultichar]
+   if(key == '-1') {
+             ^
+../src/util/main.cpp: In function ‘void CreateTrackbars()’:
+../src/util/main.cpp:62:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MIN", H_MIN);
+                                      ^
+../src/util/main.cpp:63:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MAX", H_MAX);
+                                      ^
+../src/util/main.cpp:64:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MIN", S_MIN);
+                                      ^
+../src/util/main.cpp:65:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MAX", S_MAX);
+                                      ^
+../src/util/main.cpp:66:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MIN", V_MIN);
+                                      ^
+../src/util/main.cpp:67:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MAX", V_MAX);
+                                      ^
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/tracker/Chirp.o ../src/tracker/Chirp.cpp 
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:22:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:37:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:50:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/BoundingBoxHandler.o ../src/camera/BoundingBoxHandler.cpp 
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp 
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/tracker/GeneralTracker.o ../src/tracker/GeneralTracker.cpp 
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/util/functions.o ../src/util/functions.cpp 
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/util/Config.o ../src/util/Config.cpp 
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/hungarian/Hungarian.o ../src/hungarian/Hungarian.cpp 
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/tracker/Tracker.o ../src/tracker/Tracker.cpp 
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::categorizeLeds(std::vector<Led>&, std::vector<Chirp>&, std::vector<Led>&, std::vector<Led>&, std::vector<Led>&)’:
+../src/tracker/Tracker.cpp:53:64: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  bool allPlaced = (robots.size() == util::Config::getNumRobots());
+                                                                ^
+../src/tracker/Tracker.cpp:59:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i < robots.size(); i++) {
+                                ^
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::findRobotsInCategory0(std::vector<Led>&, std::vector<Led>&, std::vector<Led>&)’:
+../src/tracker/Tracker.cpp:100:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(robots.size() == util::Config::getNumRobots()) {
+                                                 ^
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::parseLeds(std::vector<Led>)’:
+../src/tracker/Tracker.cpp:134:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(robots.size() == util::Config::getNumRobots()) {
+                                                 ^
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/Led.o ../src/camera/Led.cpp 
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui 
+18:40:12 **** Incremental Build of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui 
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+10:38:30 **** Incremental Build of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/util/main.o ../src/util/main.cpp 
+../src/util/main.cpp:371:13: warning: multi-character character constant [-Wmultichar]
+   if(key == '-1') {
+             ^
+../src/util/main.cpp: In function ‘void CreateTrackbars()’:
+../src/util/main.cpp:62:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MIN", H_MIN);
+                                      ^
+../src/util/main.cpp:63:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MAX", H_MAX);
+                                      ^
+../src/util/main.cpp:64:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MIN", S_MIN);
+                                      ^
+../src/util/main.cpp:65:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MAX", S_MAX);
+                                      ^
+../src/util/main.cpp:66:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MIN", V_MIN);
+                                      ^
+../src/util/main.cpp:67:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MAX", V_MAX);
+                                      ^
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui 
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+11:11:42 **** Incremental Build of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp 
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui 
+11:12:59 **** Incremental Build of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp 
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui 
+11:15:31 **** Incremental Build of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/util/Config.o ../src/util/Config.cpp 
+../src/util/Config.cpp:22:16: error: conflicting declaration ‘double util::Config::camera_brightness’
+ double Config::camera_brightness = 133;
+                ^
+In file included from ../src/util/Config.cpp:8:0:
+../src/util/Config.h:166:13: error: ‘util::Config::camera_brightness’ has a previous declaration as ‘int util::Config::camera_brightness’
+  static int camera_brightness;
+             ^
+../src/util/Config.cpp:22:16: error: declaration of ‘int util::Config::camera_brightness’ outside of class is not definition [-fpermissive]
+ double Config::camera_brightness = 133;
+                ^
+../src/util/Config.cpp: In static member function ‘static void util::Config::addOptions(boost::program_options::options_description&)’:
+../src/util/Config.cpp:71:78: error: no matching function for call to ‘value(int*)’
+  desc.add_options()("camera.brightness", po::value<double>(&camera_brightness));
+                                                                              ^
+../src/util/Config.cpp:71:78: note: candidates are:
+In file included from /usr/include/boost/program_options/value_semantic.hpp:418:0,
+                 from /usr/include/boost/program_options/options_description.hpp:13,
+                 from /usr/include/boost/program_options.hpp:15,
+                 from ../src/util/Config.h:11,
+                 from ../src/util/Config.cpp:8:
+/usr/include/boost/program_options/detail/value_semantic.hpp:175:5: note: template<class T> boost::program_options::typed_value<T>* boost::program_options::value()
+     value()
+     ^
+/usr/include/boost/program_options/detail/value_semantic.hpp:175:5: note:   template argument deduction/substitution failed:
+../src/util/Config.cpp:71:78: note:   candidate expects 0 arguments, 1 provided
+  desc.add_options()("camera.brightness", po::value<double>(&camera_brightness));
+                                                                              ^
+In file included from /usr/include/boost/program_options/value_semantic.hpp:418:0,
+                 from /usr/include/boost/program_options/options_description.hpp:13,
+                 from /usr/include/boost/program_options.hpp:15,
+                 from ../src/util/Config.h:11,
+                 from ../src/util/Config.cpp:8:
+/usr/include/boost/program_options/detail/value_semantic.hpp:183:5: note: template<class T> boost::program_options::typed_value<T>* boost::program_options::value(T*)
+     value(T* v)
+     ^
+/usr/include/boost/program_options/detail/value_semantic.hpp:183:5: note:   template argument deduction/substitution failed:
+../src/util/Config.cpp:71:78: note:   cannot convert ‘& util::Config::camera_brightness’ (type ‘int*’) to type ‘double*’
+  desc.add_options()("camera.brightness", po::value<double>(&camera_brightness));
+                                                                              ^
+11:16:57 **** Incremental Build of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp 
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/tracker/Chirp.o ../src/tracker/Chirp.cpp 
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:22:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:37:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:50:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/tracker/Tracker.o ../src/tracker/Tracker.cpp 
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::categorizeLeds(std::vector<Led>&, std::vector<Chirp>&, std::vector<Led>&, std::vector<Led>&, std::vector<Led>&)’:
+../src/tracker/Tracker.cpp:53:64: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  bool allPlaced = (robots.size() == util::Config::getNumRobots());
+                                                                ^
+../src/tracker/Tracker.cpp:59:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i < robots.size(); i++) {
+                                ^
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::findRobotsInCategory0(std::vector<Led>&, std::vector<Led>&, std::vector<Led>&)’:
+../src/tracker/Tracker.cpp:100:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(robots.size() == util::Config::getNumRobots()) {
+                                                 ^
+../src/tracker/Tracker.cpp: In member function ‘void tracker::Tracker::parseLeds(std::vector<Led>)’:
+../src/tracker/Tracker.cpp:134:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(robots.size() == util::Config::getNumRobots()) {
+                                                 ^
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/util/Config.o ../src/util/Config.cpp 
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/util/main.o ../src/util/main.cpp 
+../src/util/main.cpp:371:13: warning: multi-character character constant [-Wmultichar]
+   if(key == '-1') {
+             ^
+../src/util/main.cpp: In function ‘void CreateTrackbars()’:
+../src/util/main.cpp:62:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MIN", H_MIN);
+                                      ^
+../src/util/main.cpp:63:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "H_MAX", H_MAX);
+                                      ^
+../src/util/main.cpp:64:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MIN", S_MIN);
+                                      ^
+../src/util/main.cpp:65:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "S_MAX", S_MAX);
+                                      ^
+../src/util/main.cpp:66:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MIN", V_MIN);
+                                      ^
+../src/util/main.cpp:67:38: warning: too many arguments for format [-Wformat-extra-args]
+  sprintf(trackbarName, "V_MAX", V_MAX);
+                                      ^
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui 
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+13:57:44 **** Incremental Build of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/tracker/Chirp.o ../src/tracker/Chirp.cpp 
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:22:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:37:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:50:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui 
+13:59:54 **** Incremental Build of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/tracker/Chirp.o ../src/tracker/Chirp.cpp 
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:22:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:37:8: warning: unused variable ‘maxRotation’ [-Wunused-variable]
+  float maxRotation = lastSeen * Config::getRobotRotation();
+        ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::overlaps(Led)’:
+../src/tracker/Chirp.cpp:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/tracker/Chirp.cpp: In member function ‘bool Chirp::closeTo(Led)’:
+../src/tracker/Chirp.cpp:50:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+g++ -L/usr/local/lib -o ChirpObs src/util/main.o src/util/functions.o src/util/Config.o src/tracker/Tracker.o src/tracker/GeneralTracker.o src/tracker/Chirp.o src/rs232/rs232.o src/hungarian/Hungarian.o src/camera/Led.o src/camera/CameraHandler.o src/camera/BoundingBoxHandler.o -lopencv_core -lboost_system -lboost_program_options -lpthread -lopencv_imgproc -lopencv_highgui 
+Info: Nothing to build for ChirpObs
+13:14:37 **** Clean-only build of configuration Debug for project ChirpObserver ****
+make 
+make: *** No rule to make target `ChirpObserver', needed by `all'.  Stop.
+13:14:37 **** Incremental Build of configuration Debug for project ChirpObserver ****
+make 
+make: *** No rule to make target `ChirpObserver', needed by `all'.  Stop.
+Info: Nothing to build for ChirpObs
+Info: Nothing to build for ChirpObs
+16:45:42 **** Rebuild of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+16:46:12 **** Rebuild of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp 
+Command canceled
+14:22:32 **** Rebuild of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp 
+Command canceled
+16:39:53 **** Rebuild of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp 
+Command canceled

@@ -1,0 +1,7 @@
+16:39:53 **** Rebuild of configuration Debug for project ChirpObs ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -I/usr/local/include -I/usr/include/boost -O0 -g3 -Wall -c -fmessage-length=0 -o src/camera/CameraHandler.o ../src/camera/CameraHandler.cpp 
+Command canceled
+
+16:39:56 Build Finished (took 2s.729ms)
+

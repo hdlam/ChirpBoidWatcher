@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="rxtxTestPackage1.Communicator"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="gnu.io.CommPortIdentifier"/>
+<fullyQualifiedTypeName name="java.net.DatagramSocket"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="no.ntnu.idi.chirp.rxtx.MainClass"/>
+<fullyQualifiedTypeName name="java.lang.UnsatisfiedLinkError"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.geom.Ellipse"/>
+<fullyQualifiedTypeName name="trafficsim.Robot"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Input"/>
+<fullyQualifiedTypeName name="no.ntnu.idi.chirp.rxtx.RxtxClass"/>
+<fullyQualifiedTypeName name="no.ntnu.idi.chirp.rxtx.RxtxListener"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="java.lang.Float"/>
+<fullyQualifiedTypeName name="chirpBoidsSim.ChirpBot"/>
+</qualifiedTypeNameHistroy>
